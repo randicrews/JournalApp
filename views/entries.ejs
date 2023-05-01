@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <title>poetryjournal</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-7s/CzocWKIdgTcTzP8T9naH9J+d3qN/folQWccUBgSTsTpF/lYJwT+LcT40Tf9XO+3Jex3KVmIc+Zm/sJ0zHw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/504ea75c01.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+<div>
+
+    
+    <a href="/logout">Logout</a>
+    
+    <div>
+        <!-- LOCAL INFORMATION -->
+        <div>
+            <div>
+                <h3><%= user.local.email %></h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+                    <a href="/profile">new post</a>
+
+                <% } else { %>
+                    <a href="/signup">signup</a>
+                    <a href="/login">login</a>
+                <% } %>
+
+            </div>
+        </div>
+        <div>
+          </form>
+          
+        <% if (user.local.email) { %>
+          
+          <ul class="entries">
+            <% for(var i=0; i<entries.length; i++) {%>
+              <li>
+                <span><%= entries[i].date %></span>
+                <span><%= entries[i].inspo %></span>
+                <span><%= entries[i].title %></span>
+                <span><%= entries[i].body %></span>
+              </li>
+            <% } %>
+          </ul>
+
+        </div>
+        <% } %>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

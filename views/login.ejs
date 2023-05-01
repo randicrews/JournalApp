@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>poetryjournal</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+<div">
+
+    <h1>Login</h1>
+
+    <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
+    <!-- LOGIN FORM -->
+    <form action="/login" method="post">
+        <div>
+            <label>email</label>
+            <input type="text" name="email">
+        </div>
+        <div>
+            <label>password</label>
+            <input type="password" name="password">
+        </div>
+
+        <button type="submit">login</button>
+    </form>
+
+    <hr>
+
+    <p>first time? <a href="/signup">signup</a></p>
+
+</div>
+</div>
+</body>
+</html>
