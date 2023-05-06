@@ -1,31 +1,31 @@
 <!doctype html>
 <html>
 <head>
-    <title>recipeshare</title>
+    <title>poetryjournal</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-7s/CzocWKIdgTcTzP8T9naH9J+d3qN/folQWccUBgSTsTpF/lYJwT+LcT40Tf9XO+3Jex3KVmIc+Zm/sJ0zHw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/504ea75c01.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div>
+<body class="profile">
+<div class="container">
 
     
     <a href="/logout">Logout</a>
     
     <div>
         <!-- LOCAL INFORMATION -->
-        <div>
-            <div>
+        <div class="col-sm-6">
+            <div class="well">
                 <h3><%= user.local.email %></h3>
 
                 <% if (user.local.email) { %>
-                    <p>
+                    <!-- <p>
                         <strong>id</strong>: <%= user._id %><br>
                         <strong>email</strong>: <%= user.local.email %><br>
                         <strong>password</strong>: <%= user.local.password %>
-                    </p>
+                    </p> -->
                     <a href="/entries/">my entries</a>
 
                 <% } else { %>
@@ -45,7 +45,7 @@
             <div><input type="text" name="inspo" placeholder="how was your day?"></div>
             <div><input type="text" name="title" placeholder="title"></div>
             <div><textarea name="body" placeholder="here"></textarea></div>
-            <button type="submit">done for now</button>
+            <button class="btn-default" type="submit">done for now</button>
           </form>
 <!-- 
           <ul class="entries">
